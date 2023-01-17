@@ -5,12 +5,16 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
     use 'folke/tokyonight.nvim'
     
+     -- Highlights
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/playground')
+    
     -- Typescript highlighting
-    use 'HerringtonDarkholme/yats.vim'
+    -- use 'HerringtonDarkholme/yats.vim'
     -- or Plug 'leafgarland/typescript-vim'
     use 'yuezk/vim-js'
     use 'maxmellon/vim-jsx-pretty'
-    
+    use 'fsharp/vim-fsharp' 
     -- Fuzzy file finder 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
