@@ -3,8 +3,8 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
     -- packer can manage itself
     use 'wbthomason/packer.nvim'
-    use 'folke/tokyonight.nvim'
-    
+    -- use 'folke/tokyonight.nvim'
+    use 'mhartington/oceanic-next'
      -- Highlights
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('nvim-treesitter/playground')
@@ -20,7 +20,14 @@ return require('packer').startup(function()
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = {{ 'nvim-lua/plenary.nvim' }} 
     }
-    
+    -- Filetree
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+        'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    } 
     -- Git fugitive 
     use('tpope/vim-fugitive')
 

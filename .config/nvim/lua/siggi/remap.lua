@@ -1,5 +1,5 @@
 local nnoremap = require("siggi.keymap").nnoremap
 
-nnoremap("<leader>pv", "<cmd>Ex<CR>")
+nnoremap("<leader>pv", "<cmd>NvimTreeFocus<CR>")
 
 
